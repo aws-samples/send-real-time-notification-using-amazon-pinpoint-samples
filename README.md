@@ -31,7 +31,7 @@ In this step, we will create Amazon Lambda function, integrate with order_detail
 ![Lambda4](./image/img4.png)
 
 
-###a. global_var.py
+**a. global_var.py **
 This module contains all global variables. 
 * applicationId : The Amazon Pinpoint project/application ID to use when you send this message. Make sure that the SMS channel is enabled for the project or application that you choose.
 
@@ -51,16 +51,16 @@ This module contains all global variables.
 
 * Charset : The character encoding that you want to use for the subject line and message body of the email.  
 
-###b. lambda_function.py
+**b. lambda_function.py **
 This is the main entry point
 
-###c. pinpoint_email.py 
+**c. pinpoint_email.py **
 This module is used to send email to the specified recipient 
 
-###d. pinpoint_sms.py
+**d. pinpoint_sms.py **
 This module is used to send SMS to the specified mobile
 
-###e. read_rule.py
+**e. read_rule.py **
 This module reads the transaction_alert_rule table to high value transaction threshold
 
 
