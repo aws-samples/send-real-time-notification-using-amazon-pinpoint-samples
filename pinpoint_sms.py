@@ -33,7 +33,7 @@ def sendSMS(region,origination_number,destination_number,message,application_id,
     client = boto3.client('pinpoint',region_name=region)
     try:
         response = client.send_messages(
-            application_id=application_id,
+            ApplicationId=application_id,
             MessageRequest={
                 'Addresses': {
                     destination_number: {
@@ -44,9 +44,9 @@ def sendSMS(region,origination_number,destination_number,message,application_id,
                     'SMSMessage': {
                         'Body': message,
                         'Keyword': registered_keyword,
-                        'message_type': message_type,
-                        'origination_number': origination_number,
-                        'sender_id': sender_id
+                        'MessageType': message_type,
+                        'OriginationNumber': origination_number,
+                        'SenderId': sender_id
                     }
                 }
             }

@@ -41,16 +41,16 @@ def sendEmail(aws_region,sender,to_address,app_id,subject,body_text,body_html,ch
                     'EmailMessage': {
                         'FromAddress': sender,
                         'SimpleEmail': {
-                            'subject': {
-                                'charset': charset,
+                            'Subject': {
+                                'Charset': charset,
                                 'Data': subject
                             },
                             'HtmlPart': {
-                                'charset': charset,
+                                'Charset': charset,
                                 'Data': body_html
                             },
                             'TextPart': {
-                                'charset': charset,
+                                'Charset': charset,
                                 'Data': body_text
                             }
                         }
