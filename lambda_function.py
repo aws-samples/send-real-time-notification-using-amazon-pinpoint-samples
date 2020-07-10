@@ -26,17 +26,17 @@ def handle_insert(record):
     premium_item = get_premium_rule("premium",)
     send_notification = premium_item['send_notification']
     min_transaction_value = premium_item['min_transaction_value']
-    toaddress = premium_item['email']
-    destinationNumber = premium_item['phone']
+    to_address = premium_item['email']
+    destination_number = premium_item['phone']
     unit = premium_item['unit']
     print(send_notification)
     
     #Check high order value transaction 
     if (float(order_value) >= float(min_transaction_value)) and (send_notification == True) and (order_value_unit == unit):
         message = ("Customer " + customer_name  + " has created an order of value " +  order_value + unit + ".Please check Order " + order_id +" for details")
-        send_sms_status = sendSMS(region,originationNumber,destinationNumber,message,applicationId,messageType,registeredKeyword,senderId)
+        send_sms_status = sendSMS(region,origination_number,destination_number,message,application_id,message_type,registered_keyword,sender_id)
         
         subject = " High value transaction"
         body_text = "Transaction details : "
         body_html = "Customer " + customer_name  + " has created an order of value " +  order_value + unit+ ".Please check Order " + order_id +" for details"
-        send_email_status = sendEmail(region,sender,toaddress,applicationId,subject,body_text,body_html,charset)
+        send_email_status = sendEmail(region,sender,to_address,application_id,subject,body_text,body_html,charset)

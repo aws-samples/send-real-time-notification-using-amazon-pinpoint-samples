@@ -1,0 +1,13 @@
+[
+	{
+		"transaction_type" : "premium"
+		"min_transaction_value" : 10000
+		"max_transaction_value" : 50000
+		"send_notification" : ""
+		"unit" : "$"
+		"email" : "test@gmail.com"
+		"phone" : "+91123456789"
+		
+	
+	}
+]

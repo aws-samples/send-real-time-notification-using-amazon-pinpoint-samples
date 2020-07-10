@@ -1,4 +1,7 @@
-#This module reads the transaction_alert_rule table to  high value transaction threshold
+"""
+This module reads the transaction_alert_rule table to  high value transaction threshold
+
+"""
 import boto3
 from botocore.exceptions import ClientError
 def get_premium_rule(transaction_type, dynamodb=None):

@@ -1,17 +1,20 @@
+"""
+This is global module to assign the value of variables which is not coming from DynamoDB
+"""
 # The Amazon Pinpoint project/application ID to use when you send this message.
 # Make sure that the SMS channel is enabled for the project or application
 # that you choose.
-applicationId = ""
+application_id = ""
 
 # The type of SMS message that you want to send. If you plan to send
 # time-sensitive content, specify TRANSACTIONAL. If you plan to send
 # marketing-related content, specify PROMOTIONAL.
-messageType = "TRANSACTIONAL"
+message_type = "TRANSACTIONAL"
 
 # The registered keyword associated with the originating short code.
-registeredKeyword = "myKeyword"
+registered_keyword = "myKeyword"
 
-senderId = "MySenderID"
+sender_id = "Mysender_id"
 
 # The AWS Region that you want to use to send the message. For a list of
 # AWS Regions where the Amazon Pinpoint API is available, see
@@ -21,7 +24,7 @@ region = ""
 # The phone number or short code to send the message from. The phone number
 # or short code that you specify has to be associated with your Amazon Pinpoint
 # account. For best results, specify long codes in E.164 format.
-originationNumber = ""
+origination_number = ""
 
 
 # The "From" address. This address has to be verified in
