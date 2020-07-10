@@ -68,5 +68,10 @@ This module is used to send SMS to the specified mobile
 
 This module reads the transaction_alert_rule table to high value transaction threshold
 
+## License
+
+This library is licensed under the MIT-0 License. See the LICENSE file.
+
+
 
 
