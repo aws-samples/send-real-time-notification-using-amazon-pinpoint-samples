@@ -2,11 +2,12 @@
 
 Companies use real time notifications in many situation which includes anamolies detection, healthcare emergency, critical operation failure, real time crime and emergency info, fraud transaction to take decision/action as when it happens. Email is a traditional way of sending message notification. But, these use case  demands real time notification. To overcome enterprise communication challenges, SMS and Push notification is used to notify stakeholders in real time. However, building a large-scale real time notification solution can be a complex and costly challenge for a business. You need build your infrastructure, set up your network and then warm up your IP addresses and continually protect your sender reputation. Many third-party email solutions come with contracts  and up-front costs.
 Amazon Pinpoint service allows you to engage with your satkeholders by sending email, SMS and push notification messages. Your App  can use the Amazon Pinpoint API and the AWS SDKs to send transactional messages directly. With transactional messages, you send to specific recipients, as opposed to messages that you send to segments. There is no minimum fee, no setup cost and no fixed monthly cost to Amazon Pinpoint. You only pay for the messages you send, so you can start small and scale as your application grows. Amazon Pinpoint can be integrated seamlessly with other AWS services
-I am taking a use case where a business heads wants to get a notification if a customer makes a very large value order transaction. This requires immediate attention as business head wants to ensure that there is enough inventory available to deliver goods to this premium customer on time and no slippage in committed delivery date. This also requires toh have fast cordination among different business units including inventory, purchasing, production, shipment, finance to ensure a proper attention to this order. 
+I am taking a use case where a business heads wants to get a notification if a customer makes a very large value order transaction. This requires immediate attention as business head wants to ensure that there is enough inventory available to deliver goods to this premium customer on time and no slippage in committed delivery date. This also requires to have fast coordination among different business units including inventory, purchasing, production, shipment, finance to ensure a proper attention to this order. 
 
 
 ## Architecture
 
+![Architecture Diagram](./image/architecture.png)
 
 
 
@@ -16,10 +17,19 @@ In this step, we will create Amazon Lambda function, integrate with order_detail
 2. Click on Create function	
 3. Select runtime as python 3.6. Select an execution role. Please make sure your role gives read access to Amazon DynamoDB table. It should be like this:
 
+![Lambda1](./image/img1.png)
+
 4. Click on Add Trigger.
-5. Select DynamoDB table from the drop dwon. Select order_detail table from the drop down. Keep everything default. This integrates order_detail streaming to our Amazon lambda function. Our Lmabda function will be invoked everythime a transaction happens in order_detail table. 
+
+![Lambda2](./image/img2.png)
+
+5. Select DynamoDB table from the drop down. Select order_detail table from the drop down. Keep everything default. This integrates order_detail streaming to our Amazon lambda function. Our Lmabda function will be invoked everythime a transaction happens in order_detail table. 
+
+![Lambda3](./image/img3.png)
+
 6. Now copy  the source code. It should be like this:
 
+![Lambda4](./image/img4.png)
 
 
 
